@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btngrp {
+        width: 75%;
+        position: relative;
+        left: 12.5%;
+        text-align: center;
+      }
+      #btn1,
+      #btn2,
+      #btn3,
+      #btn4,
+      #btn5,
+      #btn6,
+      #btn7,
+      #btn8,
+      #btn9 {
+        width: 30%;
+        height: 48px;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btngrp" id="btns">
+      <button id="btn1">1</button>
+      <button id="btn2">2</button>
+      <button id="btn3">3</button>
+      <button id="btn4">4</button>
+      <button id="btn5" onclick="rotate()">5</button>
+      <button id="btn6">6</button>
+      <button id="btn7">7</button>
+      <button id="btn8">8</button>
+      <button id="btn9">9</button>
+    </div>
+
+    <script>
+      function rotate() {
+        let btn1 = document.getElementById("btn1").innerHTML;
+        let btn2 = document.getElementById("btn2").innerHTML;
+        let btn3 = document.getElementById("btn3").innerHTML;
+        let btn4 = document.getElementById("btn4").innerHTML;
+        let btn6 = document.getElementById("btn6").innerHTML;
+        let btn7 = document.getElementById("btn7").innerHTML;
+        let btn8 = document.getElementById("btn8").innerHTML;
+        let btn9 = document.getElementById("btn9").innerHTML;
+
+        document.getElementById("btn2").innerHTML = btn1;
+        document.getElementById("btn3").innerHTML = btn2;
+        document.getElementById("btn6").innerHTML = btn3;
+        document.getElementById("btn9").innerHTML = btn6;
+        document.getElementById("btn8").innerHTML = btn9;
+        document.getElementById("btn7").innerHTML = btn8;
+        document.getElementById("btn4").innerHTML = btn7;
+        document.getElementById("btn1").innerHTML = btn4;
+      }
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
